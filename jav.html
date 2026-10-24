@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+let number = 15;
+let attempts = 0;
+let guess;
+
+while (attempts < 5) {
+    guess = Number(prompt("Guess the number:"));
+    attempts++;
+
+    if (guess < number) {
+        alert("Low! Your number is too small.");
+    } 
+    else if (guess > number) {
+        alert("High! Your number is too big.");
+    } 
+    else {
+        alert("Correct! You guessed the number.");
+        break;
+    }
+}
+
+if (attempts === 5 && guess !== number) {
+    alert("Game Over! You used 5 attempts.");
+}
+</script>
+</body>
+</html>
